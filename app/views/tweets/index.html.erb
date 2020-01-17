@@ -1,1 +1,6 @@
 <p>Home画面</p>
+
+<% @tweets.each do |tweet| %>
+<P><%= tweet.name %></P>
+<p><%= tweet.text %></p>
+<% end %>
