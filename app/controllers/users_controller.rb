@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
     def show
-        binding.pry
-        @nickname = current_user.nickname
-        @tweets =   @tweets = current_user.tweets.order("created_at DESC")
-    end 
-end
+      user = User.find(params[:id])
+      @nickname = user.nickname
+      @tweets = user.tweets.order("created_at DESC")
+    end
+  end
